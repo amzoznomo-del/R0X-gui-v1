@@ -1,4 +1,4 @@
--- R0X GUI Script (All Purple Theme + Cmdbar buttons added)
+-- R0X GUI v1
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -52,7 +52,7 @@ toggleBtn.MouseButton1Click:Connect(function()
     mainFrame.Visible = not mainFrame.Visible
 end)
 
--- หัวข้อ GUI ด้านบน
+-- name
 local titleLabel = Instance.new("TextLabel")
 titleLabel.Size = UDim2.new(1, 0, 0, 40)
 titleLabel.Position = UDim2.new(0, 0, 0, 10)
@@ -75,7 +75,7 @@ subTitle.Text = "F3x   By ROX Team\n[ @*** ]"
 subTitle.ZIndex = 2
 subTitle.Parent = mainFrame
 
--- ปุ่ม BTools (get f3x) - สีม่วง
+-- BTools (get f3x)
 local btoolsBtn = Instance.new("TextButton")
 btoolsBtn.Size = UDim2.new(0, 110, 0, 25)
 btoolsBtn.Position = UDim2.new(0, 10, 0, 10)
@@ -92,7 +92,7 @@ btoolsBtn.MouseButton1Click:Connect(function()
     local RS = game:GetService("ReplicatedStorage") local RC = RS:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Building Tools") or game.Players.LocalPlayer.Character:FindFirstChild("Building Tools") local remote = tool.SyncAPI.ServerEndpoint local char = game.Players.LocalPlayer.Character  RC:InvokeServer(";Btools")
 end)
 
--- ปุ่ม play Theme R0X - สีม่วง
+-- play Theme R0X
 local playThemeBtn = Instance.new("TextButton")
 playThemeBtn.Size = UDim2.new(0, 110, 0, 25)
 playThemeBtn.Position = UDim2.new(0, 10, 0, 40)
@@ -109,7 +109,7 @@ playThemeBtn.MouseButton1Click:Connect(function()
     local id = "5409360995" local musicId = "5409360995" local RS = game:GetService("ReplicatedStorage") local RC = RS:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Building Tools") or game.Players.LocalPlayer.Character:FindFirstChild("Building Tools") local remote = tool.SyncAPI.ServerEndpoint local char = game.Players.LocalPlayer.Character  RC:InvokeServer(";music " .. musicId .. " ;pitch 0.85 ;volume 999 ;sm R0X IS HERE!")
 end)
 
--- ปุ่ม Shutdown - สีม่วง
+-- Shutdown
 local shutdownBtn = Instance.new("TextButton")
 shutdownBtn.Size = UDim2.new(0, 110, 0, 25)
 shutdownBtn.Position = UDim2.new(0, 10, 0, 70)
@@ -126,7 +126,7 @@ shutdownBtn.MouseButton1Click:Connect(function()
     local RS = game:GetService("ReplicatedStorage") local RC = RS:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Building Tools") or game.Players.LocalPlayer.Character:FindFirstChild("Building Tools") local remote = tool.SyncAPI.ServerEndpoint local char = game.Players.LocalPlayer.Character  RC:InvokeServer(";shutdown")
 end)
 
--- ScrollingFrame สำหรับเนื้อหาปุ่มตารางด้านใน
+-- ScrollingFrame
 local scrollingFrame = Instance.new("ScrollingFrame")
 scrollingFrame.Size = UDim2.new(1, -20, 1, -110)
 scrollingFrame.Position = UDim2.new(0, 10, 0, 100)
@@ -160,7 +160,7 @@ local function createGridButton(text, callback, order)
     return btn
 end
 
--- เรียงปุ่มทั้งหมดในตาราง (โทนสีม่วงทั้งหมด)
+-- decal
 createGridButton("Decal", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/amzoznomo-del/Decal-1/refs/heads/main/Deeeeeeeeeeeecaaaaaaaaaaaaal"))()
 end, 1)
@@ -254,7 +254,7 @@ createGridButton("Kick all", function()
     local RS = game:GetService("ReplicatedStorage") local RC = RS:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Building Tools") or game.Players.LocalPlayer.Character:FindFirstChild("Building Tools") local remote = tool.SyncAPI.ServerEndpoint local char = game.Players.LocalPlayer.Character  RC:InvokeServer(";kick all")
 end, 23)
 
--- ปุ่มใหม่ที่เพิ่มเข้ามา (Cmdbar, Uncmdbar, Cmdbar2, Uncmdbar2)
+-- (Cmdbar, Uncmdbar, Cmdbar2, Uncmdbar2)
 createGridButton("Cmdbar", function()
     local RS = game:GetService("ReplicatedStorage") local RC = RS:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Building Tools") or game.Players.LocalPlayer.Character:FindFirstChild("Building Tools") local remote = tool.SyncAPI.ServerEndpoint local char = game.Players.LocalPlayer.Character  RC:InvokeServer(";cmdbar")
 end, 24)
@@ -274,7 +274,7 @@ end, 27)
 createGridButton("soon", function() end, 28)
 createGridButton("coming soon", function() end, 29)
 
--- ปุ่ม Realm 1 วางไว้ล่างสุดขวาสุด
+-- Realm 1
 createGridButton("Realm 1", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/amzoznomo-del/Realmmm/refs/heads/main/Lola"))()
 end, 30)
